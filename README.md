@@ -61,3 +61,33 @@ Framework 버전: v4.0.30319
 보고서 ID: 7bd6bc46-f31a-4c17-aa83-d5b00d30fc70
 오류 있는 패키지 전체 이름: 
 오류 있는 패키지에 상대적인 응용 프로그램 ID: 
+
+
+오류 버킷 , 유형 0
+이벤트 이름: CLR20r3
+응답: 사용할 수 없음
+Cab ID: 0
+
+문제 서명:
+P1: GDASYTD0KILT2YGXUPPWM1A4DLBPMDTK
+P2: 3.1.24.624
+P3: 66791384
+P4: IPA_Installer
+P5: 3.1.24.624
+P6: 66791384
+P7: 2
+P8: 6a
+P9: FatalError
+P10: 
+
+첨부 파일:
+
+이 파일은 다음에서 사용할 수 있습니다.
+\\?\C:\ProgramData\Microsoft\Windows\WER\ReportQueue\AppCrash_GDASYTD0KILT2YGX_bcb97fa4862ea91fd5efda2f91f2230ddc0ad9f_816e028a_88d35808-eb36-4758-a191-a8692eb5bd00
+
+분석 기호: 
+해결 방법 재확인: 0
+보고서 ID: 7bd6bc46-f31a-4c17-aa83-d5b00d30fc70
+보고서 상태: 4100
+해시된 패킷: 
+Cab Guid: 0
