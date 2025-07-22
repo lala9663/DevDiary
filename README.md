@@ -91,3 +91,6 @@ P10:
 보고서 상태: 4100
 해시된 패킷: 
 Cab Guid: 0
+
+
+reg query "HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" /v Release
