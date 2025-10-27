@@ -55,7 +55,15 @@
       "key": "="
     }
   ],
-  "daily-notes": [
+  "periodic-notes:prev-daily-note": [
+    {
+      "modifiers": [
+        "Shift"
+      ],
+      "key": "Escape"
+    }
+  ],
+  "daily-notes:goto-prev": [
     {
       "modifiers": [
         "Mod"
@@ -63,12 +71,20 @@
       "key": "F1"
     }
   ],
-  "daily-notes:goto-next": [
+  "daily-notes": [
     {
       "modifiers": [
         "Mod"
       ],
       "key": "F2"
+    }
+  ],
+  "daily-notes:goto-next": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "F3"
     }
   ]
 }
