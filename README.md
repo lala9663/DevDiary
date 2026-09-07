@@ -163,3 +163,68 @@
     "executionOrder": "v1"
   }
 }
+
+
+
+{
+  "name": "조직 레포 이슈 조회",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual-trigger-1",
+      "name": "수동 실행",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [260, 300]
+    },
+    {
+      "parameters": {
+        "authentication": "accessToken",
+        "resource": "issue",
+        "operation": "getAll",
+        "owner": {
+          "__rl": true,
+          "value": "YOUR_ORG_NAME",
+          "mode": "list"
+        },
+        "repository": {
+          "__rl": true,
+          "value": "YOUR_REPO_NAME",
+          "mode": "list"
+        },
+        "returnAll": true,
+        "filters": {
+          "state": "all"
+        }
+      },
+      "id": "github-node-1",
+      "name": "이슈 조회",
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1,
+      "position": [480, 300],
+      "credentials": {
+        "githubApi": {
+          "id": "REPLACE_WITH_CREDENTIAL_ID",
+          "name": "GitHub Enterprise (githubsamsungds.net)"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "수동 실행": {
+      "main": [
+        [
+          {
+            "node": "이슈 조회",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "instanceId": "template"
+  }
+}
