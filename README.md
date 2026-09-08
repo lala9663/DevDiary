@@ -5,81 +5,27 @@
 - Book
 - CS
 
+1. Brity 혁신과제 개발: 2건 
+개발기간: 25/10 ~ 25/12, 26/1 ~ 26/2
+기존 Brity로 운영 중인 과제 A360 으로 Migration 작업
+현업과 소통하며 개발 기존 레거시 업무 최신화 및 요구사항 반영하여 A360으로 개발
 
-{
-  "name": "조직 레포 목록 조회 (HTTP Request)",
-  "nodes": [
-    {
-      "parameters": {},
-      "id": "manual-trigger",
-      "name": "When clicking Execute",
-      "type": "n8n-nodes-base.manualTrigger",
-      "typeVersion": 1,
-      "position": [-900, 0]
-    },
-    {
-      "parameters": {
-        "jsCode": "return [{ json: { org: 'ORG_이름_여기에_입력' } }];"
-      },
-      "id": "set-org",
-      "name": "조직명 설정",
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2,
-      "position": [-680, 0]
-    },
-    {
-      "parameters": {
-        "method": "GET",
-        "url": "=https://githubsamsungds.net/api/v3/orgs/{{ $json.org }}/repos",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "sendQuery": true,
-        "queryParameters": {
-          "parameters": [
-            { "name": "type", "value": "all" },
-            { "name": "per_page", "value": "100" },
-            { "name": "page", "value": "1" }
-          ]
-        },
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            { "name": "Accept", "value": "application/vnd.github+json" },
-            { "name": "X-GitHub-Api-Version", "value": "2022-11-28" }
-          ]
-        },
-        "options": {}
-      },
-      "id": "http-get-org-repos",
-      "name": "HTTP Request - Get Org Repos",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
-      "position": [-460, 0],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "REPLACE_WITH_CREDENTIAL_ID",
-          "name": "GHE Header Auth (Authorization: token ...)"
-        }
-      }
-    }
-  ],
-  "connections": {
-    "When clicking Execute": {
-      "main": [
-        [
-          { "node": "조직명 설정", "type": "main", "index": 0 }
-        ]
-      ]
-    },
-    "조직명 설정": {
-      "main": [
-        [
-          { "node": "HTTP Request - Get Org Repos", "type": "main", "index": 0 }
-        ]
-      ]
-    }
-  },
-  "active": false,
-  "settings": {
-    "executionOrder": "v1"
-  }
+2. A360 경영혁신 과제: 4건
+개발기간: 26/7 ~ 26/8
+A360과제로 데이터를 추출하고 검증하는 과제 개발
+
+3. Opencode Skills:
+개발 기간 26/05 ~ 26/06
+EDM에 접속하지 않고도 로컬에서 파일 자동 업로드 기능 구현
+
+4. Brity 과제 실행 챗봇:
+개발 기간: 24/08 ~ 24/11
+Brity 과제를 Brity Assistant를 통한 챗봇 개발 - 사용자가 챗봇을 통해 RPA 과제 실행할 수 있도록 구현
+
+5. 비가동 봇 탐지 및 실행
+개발 기간: 25/1 ~ 25/3
+n8n을 통하여 비가동 중인 Brity 봇 주기적으로 탐지하여 특정시간 이상 비가동 중일 경우 재부팅 프로세스 개발
+
+6. 데일리 이슈 정리 및 요약
+개발 기간: 26/09 ~ 
+n8n 과 aiAgent를 활용하여 데일리 스크럼 및 진행사항을 정리하여 매주 보고서 형식으로 정리하는 프로세스 개발 
