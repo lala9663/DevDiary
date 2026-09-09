@@ -1,3 +1,11 @@
+
+Gmail 기반 자동 문서 분류 & 저장 시스템 (사내 해커톤)
+개발기간  2025.10 ~ 2025.12
+· 개요  Gmail로 수신되는 메일·첨부파일을 자동 분류해 Google Drive에 중복 없이 저장하고, 처리 이력을 DB에 기록, 결과를 Teams로 알림하는 자동화 파이프라인 구축. n8n 워크플로우와 Flowise 기반 LLM Agent를 연계한 Agent to Agent 구조로 설계.
+· 참여 규모  3인 (팀 프로젝트) — 본인은 Agent 간 연계 및 메일 분류 필터링 부분 담당.
+· 수행 역할  n8n과 Flowise Agent 간 연계(Agent to Agent) 부분과 처리 이력 기반 메일 분류·필터링(중복 방지) 로직 설계·개발 담당.
+· 사용 기술  n8n, Flowise (LLM Agent), Agent to Agent 구조
+
 9# Obsidian
 개인 메모와 정리 하는 공간
 
